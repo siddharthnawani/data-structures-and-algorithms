@@ -2,6 +2,26 @@ package src.com.sid.graphs;
 
 import java.util.Scanner;
 
+/***
+ * enter no of vertex
+ * 7
+ * enter no of edges
+ * 6
+ * 0 1
+ * 1 2
+ * 2 3
+ * 3 4
+ * 4 0
+ * 5 6
+ * 0
+ * 1
+ * 2
+ * 3
+ * 4
+ * 5
+ * 6
+ *
+ * **/
 public class DFS {
 
     private void printDFS(int[][] adj_mat){
