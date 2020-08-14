@@ -23,6 +23,10 @@ public class Theory {
      *      j. Time to check edge b/w any component is O(1); but space complexity is n^2.
      *      9.4 Incidence Matrix : optimization of Adjacency matrix for space i.e for sparse graphs. Row and columns are
      *      Edges and vertices, rest is same as Adjacency matrix.
+     * 10. DFS : Time compleity O(V+E) -> goes to vertex and then traverse back through the edges;
+     *           Space Complexity O(V) -> all the vertex are stored in the stack. Possible in case of vertical graph.
+     * 11. BFS : Time Complexity O(V+E) ; -> goes to vertex while pushing in the queue and once while popping it out.
+     *           Space Complexity O(V) -> worst case when all are immediate child of root.
      *
      * ***/
 }
