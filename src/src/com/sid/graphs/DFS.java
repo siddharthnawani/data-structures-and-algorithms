@@ -28,6 +28,7 @@ public class DFS {
         int v=adj_mat.length;
         boolean[] visited=new boolean[v];
 
+        //This loop ensures that, if there are any unconnected components, they are also visited.
         for(int i=0;i<v;i++){
             if(visited[i]==false)
                 printHelper(adj_mat,i,visited);
