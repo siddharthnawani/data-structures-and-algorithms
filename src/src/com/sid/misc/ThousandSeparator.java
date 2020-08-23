@@ -1,5 +1,7 @@
 package src.com.sid.misc;
 
+import java.text.DecimalFormat;
+
 /**
  * 1556. Thousand Separator
  * Given an integer n, add a dot (".") as the thousands separator and return it in string format.
@@ -40,9 +42,18 @@ public class ThousandSeparator {
 
         return s;
     }
+    public String thousandSeparatorUsingDecimalFormat(int n) {
+        //String s=String.valueOf(n);
+        //s=s.reverse();
+        DecimalFormat numberFormat = new DecimalFormat("##,###");
+        String str = numberFormat.format(n);
+        return str.replaceAll(",",".");
+
+    }
 
     public static void main(String[] args) {
         int n = 123456789;
         System.out.println(new ThousandSeparator().thousandSeparator(n));
+        System.out.println(new ThousandSeparator().thousandSeparatorUsingDecimalFormat(n));
     }
 }
