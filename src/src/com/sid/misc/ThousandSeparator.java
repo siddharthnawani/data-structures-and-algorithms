@@ -42,12 +42,13 @@ public class ThousandSeparator {
 
         return s;
     }
+
     public String thousandSeparatorUsingDecimalFormat(int n) {
         //String s=String.valueOf(n);
         //s=s.reverse();
         DecimalFormat numberFormat = new DecimalFormat("##,###");
         String str = numberFormat.format(n);
-        return str.replaceAll(",",".");
+        return str.replaceAll(",", ".");
 
     }
 
