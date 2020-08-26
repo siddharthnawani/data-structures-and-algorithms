@@ -17,6 +17,7 @@ public class Theory {
      *      9.1 Edge list implementation where every edge pair is siored in a list. Time to check if there is an edge b/w two
      *      components is n^2
      *      9.2 Adjacency List : Array/list of vertex where each vertex contains a list of connected nodes. Time to check
+     *      Ex: List<Integer>[] g = new ArrayList[n]; // This is an array of List
      *      if there is an edge b/w 2 vertex is n. O(1) to reach a vertex and O(n) to traverse the lsit attached to it.
      *      Its space complexity is better than that of Adjacency matrix.
      *      9.3 Adjacency matrix : 2D array representing vertex with V(i,j) is 1 , if there an egde between vertex i and
