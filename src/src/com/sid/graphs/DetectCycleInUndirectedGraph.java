@@ -51,6 +51,12 @@ public class DetectCycleInUndirectedGraph {
 
     private boolean isCyclic(ArrayList<ArrayList<Integer>> adj, int V){
         boolean[] visited=new boolean[V];
+
+        /**
+         * No need to check for all. if every vertex doesn't have a path then obviously it's not a tree.
+         * do simple dfs from node 0 and at last check of all nodes are visited. FOr reference see
+         * GraphValidTree.java
+         * **/
         for(int i=0;i<V;i++){
             if(!visited[i])
                 if(DFS(adj,i,visited,-1))
