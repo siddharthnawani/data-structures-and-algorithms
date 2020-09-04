@@ -18,5 +18,15 @@ public class Theory {
      *      2.3 Stack
      *
      *
+     * Speaking further to this, recursion can be solved using two principles :
+     *
+     * 1. Faith Expectation Principle
+     *    We start building goes to the base case and  we return back to the original to get the
+     *    answers like: GetKeypadCombination , GetMazePaths,GetStairPaths etc.. all the Get ones..
+     *
+     * 2. Level Option Principles
+     *    Here the the solution is build from bottom and gets printed once we are at
+     *    top level or at base case  like : PrintStairPaths,PrintKeypadCombination etc..
+     *
      * ***/
 }
