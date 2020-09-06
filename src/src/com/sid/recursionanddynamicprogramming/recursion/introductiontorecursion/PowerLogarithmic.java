@@ -1,4 +1,4 @@
-package src.com.sid.recursionanddynamicprogramming.recursion;
+package src.com.sid.recursionanddynamicprogramming.recursion.introductiontorecursion;
 
 /***
  *https://www.pepcoding.com/resources/online-java-foundation/introduction-to-recursion/power-logarithmic-official/ojquestion

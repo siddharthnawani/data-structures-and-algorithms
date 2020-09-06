@@ -1,4 +1,4 @@
-package src.com.sid.recursionanddynamicprogramming.recursion;
+package src.com.sid.recursionanddynamicprogramming.recursion.introductiontorecursion;
 
 public class PrintDecreasing {
     private void printDecreasing(int n){
