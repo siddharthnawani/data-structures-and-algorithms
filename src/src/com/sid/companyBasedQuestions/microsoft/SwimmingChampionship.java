@@ -1,4 +1,4 @@
-package src.com.sid.misc;
+package src.com.sid.companyBasedQuestions.microsoft;
 
 import java.util.Arrays;
 import java.util.Comparator;
