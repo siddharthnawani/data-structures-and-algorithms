@@ -18,6 +18,19 @@ import java.util.HashMap;
  * baab
  * baba
  * bbaa
+ *
+ * ---------
+ * Approach :
+ *
+ * Here boxes are at level and items/words are at options
+ *
+ *
+ * B1  -> X _ _  It has 3 options blank, A , B
+ * B1_ -> _ _ _  It has 3 options blank, A , B
+ * B1A -> A _ _ It has 2  options blank , B
+ * B1B -> B _ _ It has 2  options blank , A
+ *
+ * and so on..
  */
 public class PermutationsWords1 {
 
