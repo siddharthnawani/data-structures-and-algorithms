@@ -28,5 +28,11 @@ public class Theory {
      *    Here the the solution is build from bottom and gets printed once we are at
      *    top level or at base case  like : PrintStairPaths,PrintKeypadCombination etc..
      *
+     *    Level Options :
+     *
+     *    which ever things are at level : is always passed as parameter in function and it forms our base case
+     *    which ever things are available in options : they form the loop inside the function
+     *    Ex: Refer permutation and combination questions.
+     *
      * ***/
 }
