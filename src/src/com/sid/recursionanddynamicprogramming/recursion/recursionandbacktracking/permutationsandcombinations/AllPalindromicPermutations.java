@@ -1,4 +1,4 @@
-package src.com.sid.recursionanddynamicprogramming.recursion.recursionandbacktracking;
+package src.com.sid.recursionanddynamicprogramming.recursion.recursionandbacktracking.permutationsandcombinations;
 
 import java.util.HashMap;
 import java.util.Scanner;

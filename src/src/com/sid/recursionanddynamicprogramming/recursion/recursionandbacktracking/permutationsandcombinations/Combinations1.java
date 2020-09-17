@@ -1,4 +1,4 @@
-package src.com.sid.recursionanddynamicprogramming.recursion.recursionandbacktracking;
+package src.com.sid.recursionanddynamicprogramming.recursion.recursionandbacktracking.permutationsandcombinations;
 
 /**
  * https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/combinations-i-official/ojquestion#
