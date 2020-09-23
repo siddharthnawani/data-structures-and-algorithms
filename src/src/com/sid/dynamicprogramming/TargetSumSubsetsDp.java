@@ -41,6 +41,10 @@ public class TargetSumSubsetsDp {
          *
          * column : 0 to target
          *
+         * Insight :
+         *
+         * Here duplicacy is not allwed hence the 2d array else, there would be 1 d array.
+         *
          * */
         boolean[][] dp = new boolean[arr.length + 1][tar + 1];
 
