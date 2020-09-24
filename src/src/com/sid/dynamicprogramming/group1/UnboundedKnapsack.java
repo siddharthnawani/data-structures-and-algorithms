@@ -1,4 +1,4 @@
-package src.com.sid.dynamicprogramming;
+package src.com.sid.dynamicprogramming.group1;
 
 import java.util.Scanner;
 
