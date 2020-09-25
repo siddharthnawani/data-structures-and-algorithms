@@ -51,6 +51,9 @@ public class CountEncodings {
 
         for (int i = 1; i < dp.length; i++) {
 
+            /**
+             * Like ...00
+             * */
             if (str.charAt(i - 1) == '0' && str.charAt(i) == '0') {
                 dp[i] = 0;
 
@@ -91,6 +94,9 @@ public class CountEncodings {
                 }
 
             } else if (str.charAt(i - 1) == '0' && str.charAt(i) != '0') {
+                /**
+                 * Like ...05
+                 * */
                 dp[i] = dp[i - 1];
             } else {
 
