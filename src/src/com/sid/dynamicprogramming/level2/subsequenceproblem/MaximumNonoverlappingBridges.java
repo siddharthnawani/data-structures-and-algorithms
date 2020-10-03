@@ -1,4 +1,4 @@
-package src.com.sid.dynamicprogramming.level2;
+package src.com.sid.dynamicprogramming.level2.subsequenceproblem;
 
 import java.util.Arrays;
 import java.util.Scanner;
