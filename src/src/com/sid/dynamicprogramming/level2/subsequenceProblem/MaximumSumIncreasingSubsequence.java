@@ -1,4 +1,4 @@
-package src.com.sid.dynamicprogramming.level2.subsequenceproblem;
+package src.com.sid.dynamicprogramming.level2.subsequenceProblem;
 
 import java.util.Scanner;
 
