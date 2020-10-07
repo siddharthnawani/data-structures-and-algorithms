@@ -1,4 +1,4 @@
-package src.com.sid.dynamicprogramming.level2.pathsProblem;
+package src.com.sid.dynamicprogramming.level2.subsequenceProblem;
 
 import java.util.HashMap;
 import java.util.Map;
