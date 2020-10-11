@@ -167,6 +167,23 @@ public class LinearizeAGenericTree {
         }
     }
 
+    public static Node linearize2(Node node) {
+
+        if (node.children.size() == 0)
+            return node;
+
+        Node linLstNodeTail = linearize2(node.children.get(node.children.size() - 1));
+
+        while (node.children.size() > 1) {
+            Node lastChildlinear = node.children.remove(node.children.size() - 1);
+            Node secondLastChild = node.children.get(node.children.size() - 1);
+            Node secondLastLinearTail = linearize2(secondLastChild);
+            secondLastLinearTail.children.add(lastChildlinear);
+        }
+
+        return linLstNodeTail;
+    }
+
     private static Node getTail(Node node) {
         while (node.children.size() == 1) {
             node = node.children.get(0);
@@ -186,5 +203,11 @@ public class LinearizeAGenericTree {
         Node root = construct(arr);
         linearize(root);
         display(root);
+
+        root = construct(arr);
+        linearize2(root);
+        display(root);
+
+
     }
 }
