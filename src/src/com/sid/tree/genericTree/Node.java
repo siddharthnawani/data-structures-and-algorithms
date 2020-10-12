@@ -5,8 +5,9 @@ import java.util.Stack;
 
 
 public class Node {
-    int data;
-    ArrayList<Node> children = new ArrayList<>();
+
+    public int data;
+    public ArrayList<Node> children = new ArrayList<>();
 
 
     public static void display(Node node) {
