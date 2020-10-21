@@ -1,0 +1,50 @@
+1. Expectations :
+
+System/Product Knowledge :
+
+Knowledge of Various Technologies :
+
+Consideration to pick a technology over the other.
+
+Future Growth (Scalable) ?
+
+2. Introduction to Caching :
+
+2.1  High Speed Data Storage Layer. This is fast because you use RAM rather than normal storage. since RAM is faster than disk.
+2.2  It is a transient storage. Generally placed in front of DB's or applications, or in front of places where there are high I/O .
+2.3 Pre computed value are stored in cache and this is hit before the actual system. If there is a miss in the cache then only you go to the main system.
+2.4 Applications : DB, OS, CDN, Web Apps etc.
+2.5 Benefits like improved performance, more IOPS, Reduce DB loads.
+
+3. Specs and features
+
+Specs :-
+These params can help in optimizing the performance of cache.
+
+3.1 Size of cache : ask from interview , google , fb have cache in TBs
+3.2 Query per second : thousands of hits per sec; confirm from interview
+3.3 Cache Validity : validity of the items in cache; it should be in sync with the stored data; should not be inconsistent.
+3.4 Cache Hit Rate : How many times your are getting data from the cache. this means when you hit the cache, you should get output from it rather than going to the actual db/app.
+3.5 Cache Miss : This is when you hit the cache and you didn't find the data over there and then you go to the actual db/app for the data.
+3.6 TTL : Time to Live; how long will your data will reside in your cache.
+
+
+Features :-
+3.7 Cache Access Patterns : this is how you access your cache. Your Query per second would be highly dependent on it.
+3.8 Cache Eviction : decides your TTL, Cache Miss and Cache Hit Rate. Keep highly used frequent items in your cache and remove the low used items.
+3.9 Availability : Should be higly available.
+3.10 Scalability and Consistent Hashing :
+
+
+4. Distributed Cache :
+
+Pool of cache/ram which are capable of working together.They are horizontally scalable.
+
+Pic 1
+
+5 How can we access Cache :
+
+
+
+
+
