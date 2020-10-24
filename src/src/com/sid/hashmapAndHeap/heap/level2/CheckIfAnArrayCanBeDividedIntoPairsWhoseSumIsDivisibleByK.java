@@ -17,6 +17,34 @@ import java.util.Scanner;
  * Sample Output
  * true
  ***/
+
+/***
+ * to handle negative numbers as well, the solution needs to be modified a little. Put  the below where-ever you are calculating remainder.
+ * int rem = val % k;
+ *  if(rem <0){
+ *       rem +=k;
+ *  }
+ *
+ * Logic behind this approach:
+ *
+ * lets take example of n =-1 and k=3
+ *
+ * all the probable solution pair for n could be :
+ * -1,1
+ * -1,4
+ * -1,7
+ * and so on..
+ *
+ * so remainder of 1,4,7.. is 1 and these numbers look for theeir equivalent partner with rem as 2 (k - rem) and to represent -1 as one of the choice for these we have to convert its remainder :
+ *  -1 % 3 = -1.  to 2 i.e why we add k if the remainder is negative which is done by the code
+ * if(rem <0){
+ *       rem +=k;
+ *  }
+ *
+ * Hope this helps..
+ *
+ *
+ * **/
 public class CheckIfAnArrayCanBeDividedIntoPairsWhoseSumIsDivisibleByK {
 
     public static void solution(int[] arr, int k) {
@@ -24,12 +52,18 @@ public class CheckIfAnArrayCanBeDividedIntoPairsWhoseSumIsDivisibleByK {
 
         for (int val : arr) {
             int rem = val % k;
+            if(rem <0){
+                rem +=k;
+            }
             int f = fmap.getOrDefault(rem, 0);
             fmap.put(rem, f + 1);
         }
 
         for (int val : arr) {
             int rem = val % k;
+            if(rem <0){
+                rem +=k;
+            }
 
             if (rem == 0) {
                 int f = fmap.get(rem);
@@ -62,13 +96,20 @@ public class CheckIfAnArrayCanBeDividedIntoPairsWhoseSumIsDivisibleByK {
     }
 
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
+
+
+        /*Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = scn.nextInt();
         }
-        int k = scn.nextInt();
+        int k = scn.nextInt();*/
+        //int[] arr = {-1,1,-2,2,-3,3,-4,4};
+        int[] arr={1,2,3,4,5,6};
+        int  k = 10;
         solution(arr, k);
+
+
     }
 }
