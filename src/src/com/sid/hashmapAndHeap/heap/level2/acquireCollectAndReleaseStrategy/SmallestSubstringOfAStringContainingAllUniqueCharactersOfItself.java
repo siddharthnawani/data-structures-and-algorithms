@@ -1,4 +1,4 @@
-package src.com.sid.hashmapAndHeap.heap.level2;
+package src.com.sid.hashmapAndHeap.heap.level2.acquireCollectAndReleaseStrategy;
 
 import java.util.HashMap;
 import java.util.HashSet;

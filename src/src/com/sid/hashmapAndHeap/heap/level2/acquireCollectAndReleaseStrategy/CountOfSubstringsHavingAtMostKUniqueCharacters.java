@@ -1,60 +1,58 @@
-package src.com.sid.hashmapAndHeap.heap.level2;
+package src.com.sid.hashmapAndHeap.heap.level2.acquireCollectAndReleaseStrategy;
 
 import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- * https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/longest-substring-with-exactly-k-unique-characters-official/ojquestion#
+ * https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/count-of-substrings-having-at-most-k-unique-characters-official/ojquestion#
  * <p>
  * Question
  * 1. You are given a string(str) and a number K.
- * 2. You have to find length of the longest substring that has exactly k unique characters.
- * 3. If no such substring exists, print "-1".
+ * 2. You have to find the count of substrings of the given string that contains at most K unique characters.
  * <p>
  * Sample Input
  * aabcbcdbca
  * 2
  * Sample Output
- * 4
+ * 23
  **/
-public class LongestSubstringWithExactlyKUniqueCharacters {
+public class CountOfSubstringsHavingAtMostKUniqueCharacters {
     public static int solution(String str, int k) {
         int ans = 0;
         int i = -1;
         int j = -1;
+
         HashMap<Character, Integer> map = new HashMap<>();
 
         while (true) {
-            boolean f1 = false;
-            boolean f2 = false;
 
-            //acquire
+
+            //acquire and collect
             while (i < str.length() - 1) {
-                f1 = true;
+
                 i++;
                 char ch = str.charAt(i);
                 map.put(ch, map.getOrDefault(ch, 0) + 1);
-
-                if (map.size() < k) {
-                    continue;
-                } else if (map.size() == k) {
-                    //no need to break; keep collecting the answer
+                if (map.size() <= k) {
                     int len = i - j;
-                    if (len > ans) {
-                        ans = len;
-                    }
+
+                    ans += len;
+
                 } else {
-                    //break only if length increases the threshold
                     break;
                 }
             }
 
-            //release
+            if (i == str.length() - 1 && map.size() <= k) {
+                break;
+            }
+
+
+            //release and collect
             while (j < i) {
-                f2 = true;
+
                 j++;
                 char ch = str.charAt(j);
-
                 if (map.get(ch) == 1) {
                     map.remove(ch);
                 } else {
@@ -62,21 +60,17 @@ public class LongestSubstringWithExactlyKUniqueCharacters {
                 }
 
                 if (map.size() > k) {
-                    //keep removing
                     continue;
-                } else if (map.size() == k) {
+                } else {
                     int len = i - j;
-                    if (len > ans) {
-                        ans = len;
-                    }
+
+                    ans += len;
+
                     break;
                 }
 
             }
 
-            if (f1 == false && f2 == false) {
-                break;
-            }
 
         }
 
