@@ -1,9 +1,6 @@
 package src.com.sid.companyBasedQuestions.amazon;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /***
  * Amazon | OA 2020 | Keyword Suggestions
@@ -83,11 +80,38 @@ public class SearchSuggestionsSystem {
         }
         return search(searchWord, root);
     }
+    public List<List<String>> suggestedProductsSolutionUsingPQ(String[] products, String searchWord) {
+        //created a max heap
+        PriorityQueue<String> pq=new PriorityQueue<>(Comparator.reverseOrder());
+        List<List<String>> ans= new ArrayList<>();
+
+        for(int i=1;i<=searchWord.length();i++){
+            String prefix=searchWord.substring(0,i);
+            for(String s:products){
+                if(s.startsWith(prefix)){
+                    pq.offer(s);
+                }
+                if(pq.size()>3){
+                    pq.poll();
+                }
+            }
+
+            LinkedList<String> list=new LinkedList<>();
+            while(pq.size()>0){
+                list.addFirst(pq.poll());
+            }
+
+            ans.add(list);
+        }
+
+        return ans;
+    }
 
     public static void main(String[] args) {
         String[] products = {"mobile", "mouse", "moneypot", "monitor", "mousepad"};
         String searchWord = "mouse";
         System.out.println(new SearchSuggestionsSystem().suggestedProducts(products, searchWord));
+        System.out.println(new SearchSuggestionsSystem().suggestedProductsSolutionUsingPQ(products, searchWord));
 
     }
 }
