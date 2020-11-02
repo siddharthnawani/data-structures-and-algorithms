@@ -6,10 +6,9 @@ import java.util.LinkedList;
 import java.util.Stack;
 
 /**
- *
  * You tube link : https://www.youtube.com/watch?v=ZeDNSeilf-Y
  * Geeks link: https://www.geeksforgeeks.org/tarjan-algorithm-find-strongly-connected-components/
- *
+ * <p>
  * // Java program to find strongly connected
  * // components in a given directed graph
  * // using Tarjan's algorithm (single DFS)
@@ -26,6 +25,12 @@ import java.util.Stack;
  * low[u] = min(low[u], low[v]);
  * Case 2 (Back Edge): When child v is already visited, then minimum of low[u] and Disc[v] will be updated to low[u].
  * low[u] = min(low[u], disc[v]);
+ * <p>
+ * Time Complexity:
+ * The time complexity of Tarjan’s Algorithm and Kosaraju’s Algorithm will be O(V + E), where V represents the set of vertices and E represents the set of edges of the graph. Tarjan’s algorithm has much lower constant factors w.r.t Kosaraju’s algorithm. In Kosaraju’s algorithm, the traversal of the graph is done at least 2 times, so the constant factor can be of double time. We can print the SCC in progress with Kosaraju’s algorithm as we perform the second DFS. While performing Tarjan’s Algorithm, it requires extra time to print the SCC after finding the head of the SCCs sub-tree.
+ * <p>
+ * Summary:
+ * Both the methods have the same linear time complexity, but the techniques or the procedure for the SCC computations are fairly different. Tarjan’s method solely depends on the record of nodes in a DFS to partition the graph whereas Kosaraju’s method performs the two DFS (or 3 DFS if we want to leave the original graph unchanged) on the graph and is quite similar to the method for finding the topological sorting of a graph.
  **/
 
 public class TarjanAlgorithm {
