@@ -18,6 +18,12 @@ import java.util.Stack;
  * 4) Mark all vertices as not-visited in reversed graph.
  * <p>
  * 5) Do a DFS traversal of reversed graph starting from same vertex v (Same as step 2). If DFS traversal doesn’t visit all vertices, then return false. Otherwise return true.
+ * <p>
+ * Time Complexity:
+ * The time complexity of Tarjan’s Algorithm and Kosaraju’s Algorithm will be O(V + E), where V represents the set of vertices and E represents the set of edges of the graph. Tarjan’s algorithm has much lower constant factors w.r.t Kosaraju’s algorithm. In Kosaraju’s algorithm, the traversal of the graph is done at least 2 times, so the constant factor can be of double time. We can print the SCC in progress with Kosaraju’s algorithm as we perform the second DFS. While performing Tarjan’s Algorithm, it requires extra time to print the SCC after finding the head of the SCCs sub-tree.
+ * <p>
+ * Summary:
+ * Both the methods have the same linear time complexity, but the techniques or the procedure for the SCC computations are fairly different. Tarjan’s method solely depends on the record of nodes in a DFS to partition the graph whereas Kosaraju’s method performs the two DFS (or 3 DFS if we want to leave the original graph unchanged) on the graph and is quite similar to the method for finding the topological sorting of a graph.
  ***/
 public class KosarajuAlgorithm {
 
