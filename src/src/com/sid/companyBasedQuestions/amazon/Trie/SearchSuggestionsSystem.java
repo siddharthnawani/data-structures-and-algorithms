@@ -1,4 +1,4 @@
-package src.com.sid.companyBasedQuestions.amazon;
+package src.com.sid.companyBasedQuestions.amazon.Trie;
 
 import java.util.*;
 
