@@ -1,4 +1,4 @@
-package src.com.sid.String;
+package src.com.sid.String.SlidingWindow;
 
 import java.util.ArrayList;
 import java.util.HashMap;
