@@ -1,6 +1,10 @@
 package src.com.sid.companyBasedQuestions.amazon.SlidingWindow;
 
 /**
+ * https://github.com/shehabic/java-algorithms/blob/master/src/solutions/MinWindowSubSequence.java
+ * <p>
+ * https://www.youtube.com/watch?v=W2DvQcDPD9A
+ * <p>
  * 727. Minimum Window Subsequence
  * https://leetcode.com/problems/minimum-window-subsequence/
  * <p>
