@@ -86,7 +86,7 @@ public class PalindromeLinkedList {
 
 
     //Using iteration 2
-
+    //https://leetcode.com/problems/palindrome-linked-list/discuss/64501/Java-easy-to-understand
     public boolean isPalindrome_UsingIteration2(ListNode head) {
         ListNode fast = head, slow = head;
         while (fast != null && fast.next != null) {
